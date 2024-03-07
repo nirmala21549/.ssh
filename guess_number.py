@@ -8,8 +8,10 @@ while True:
     if guess.lower() == 'q':
         print(f"The number was {number}.")
         break
-    elif int(guess) == number:
+    elif int(guess) > number:
+        print("Too high! Try again.")
+    elif int(guess) < number:
+        print("Too low! Try again.")
+    else:
         print("Congratulations! You guessed the right number.")
         break
-    else:
-        print("Sorry! That's not the correct number. Try again.")
